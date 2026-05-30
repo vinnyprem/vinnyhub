@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VinnyHub</title>
+
+<meta name="description" content="VinnyHub - Food, Groceries, Rides and Swaroop Pickles">
+
+<!-- PASTE GOOGLE VERIFICATION CODE BELOW -->
+<!-- Replace YOUR_GOOGLE_CODE -->
+
+<meta name="google-site-verification" content="YOUR_GOOGLE_CODE" />
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(to right,#fff3e0,#ffe0b2);
+}
+
+.header{
+background:linear-gradient(45deg,#bf360c,#ff7043);
+color:white;
+text-align:center;
+padding:25px;
+font-size:35px;
+font-weight:bold;
+box-shadow:0 3px 10px rgba(0,0,0,0.3);
+}
+
+.sub{
+font-size:16px;
+margin-top:8px;
+}
+
+.form-box{
+background:white;
+margin:20px auto;
+width:90%;
+max-width:500px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+input{
+width:95%;
+padding:12px;
+margin:8px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+h2{
+text-align:center;
+color:#bf360c;
+margin-top:40px;
+}
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.product{
+background:white;
+width:260px;
+margin:15px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.product:hover{
+transform:scale(1.05);
+}
+
+.product img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.content{
+padding:12px;
+}
+
+.content h3{
+margin:0;
+}
+
+select,button{
+width:100%;
+padding:10px;
+margin-top:8px;
+border-radius:8px;
+border:none;
+}
+
+button{
+background:#25D366;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#1ebd5a;
+}
+
+.footer{
+background:#bf360c;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+🔥 VinnyHub
+<div class="sub">
+Food • Groceries • Rides • Swaroop Pickles
+</div>
+</div>
+
+<div class="form-box">
+
+<h3>Enter Your Details</h3>
+
+<input type="text" id="name" placeholder="Your Name">
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<input type="text" id="address" placeholder="Delivery Address">
+
+</div>
+
+<!-- FOOD -->
+
+<h2>🍔 Food Delivery</h2>
+
+<div class="container">
+
+<div class="product">
+<img loading="lazy" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+<div class="content">
+<h3>Pizza</h3>
+
+<select id="pizza">
+<option>Small Pizza - ₹149</option>
+<option>Medium Pizza - ₹299</option>
+<option>Large Pizza - ₹499</option>
+</select>
+
+<button onclick="foodOrder('Pizza','pizza')">
+Order Food
+</button>
+
+</div>
+</div>
+
+<div class="product">
+<img loading="lazy" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+<div class="content">
+<h3>Burger</h3>
+
+<select id="burger">
+<option>Veg Burger - ₹99</option>
+<option>Chicken Burger - ₹149</option>
+<option>Cheese Burger - ₹199</option>
+</select>
+
+<button onclick="foodOrder('Burger','burger')">
+Order Food
+</button>
+
+</div>
+</div>
+
+<div class="product">
+<img loading="lazy" src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a">
+<div class="content">
+<h3>Biryani</h3>
+
+<select id="biryani">
+<option>Chicken Biryani - ₹199</option>
+<option>Mutton Biryani - ₹299</option>
+<option>Family Pack - ₹599</option>
+</select>
+
+<button onclick="foodOrder('Biryani','biryani')">
+Order Food
+</button>
+
+</div>
+</div>
+
+</div>
+
+<!-- GROCERY -->
+
+<h2>🛒 Groceries</h2>
+
+<div class="container">
+
+<div class="product">
+<img loading="lazy" src="https://images.unsplash.com/photo-1542838132-92c53300491e">
+<div class="content">
+<h3>Vegetables</h3>
+
+<select id="vegetables">
+<option>Tomatoes 1kg - ₹40</option>
+<option>Potatoes 1kg - ₹35</option>
+<option>Onions 1kg - ₹50</option>
+</select>
+
+<button onclick="groceryOrder('Vegetables','vegetables')">
+Order Grocery
+</button>
+
+</div>
+</div>
+
+<div class="product">
+<img loading="lazy" src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b">
+<div class="content">
+<h3>Fruits</h3>
+
+<select id="fruits">
+<option>Apples 1kg - ₹120</option>
+<option>Bananas 1dozen - ₹60</option>
+<option>Mangoes 1kg - ₹150</option>
+</select>
+
+<button onclick="groceryOrder('Fruits','fruits')">
+Order Grocery
+</button>
+
+</div>
+</div>
+
+<div class="product">
+<img loading="lazy" src="https://images.unsplash.com/photo-1550583724-b2692b85b150">
+<div class="content">
+<h3>Milk Products</h3>
+
+<select id="milk">
+<option>Milk 1L - ₹65</option>
+<option>Curd 1kg - ₹80</option>
+<option>Butter 500g - ₹250</option>
+</select>
+
+<button onclick="groceryOrder('Milk Products','milk')">
+Order Grocery
+</button>
+
+</div>
+</div>
+
+</div>
+
+<!-- RIDES -->
+
+<h2>🛵 Ride Booking</h2>
+
+<div class="container">
+
+<div class="product">
+<img loading="lazy" src="https://images.unsplash.com/photo-1558981806-ec527fa84c39">
+<div class="content">
+<h3>Bike Ride</h3>
+
+<select id="bikeRide">
+<option>Up to 10 KM - ₹150</option>
+<option>10 KM to 20 KM - ₹300</option>
+<option>Above 20 KM - ₹500</option>
+</select>
+
+<button onclick="rideBooking('Bike Ride','bikeRide')">
+Book Ride
+</button>
+
+</div>
+</div>
+
+<div class="product">
+<img loading="lazy" src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+<div class="content">
+<h3>Cab Ride</h3>
+
+<select id="cabRide">
+<option>Up to 10 KM - ₹300</option>
+<option>10 KM to 20 KM - ₹600</option>
+<option>Above 20 KM - ₹1000</option>
+</select>
+
+<button onclick="rideBooking('Cab Ride','cabRide')">
+Book Cab
+</button>
+
+</div>
+</div>
+
+</div>
+
+<!-- PICKLES -->
+
+<h2>🌶️ Swaroop Pickles</h2>
+
+<div class="container">
+
+<div class="product">
+<img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU7aXX2xKEVfhCoaCoYhaJRIR1Vb4I4nwtcA&s">
+<div class="content">
+<h3>Chicken Pickle</h3>
+
+<select id="chicken">
+<option>250g - ₹250</option>
+<option>500g - ₹500</option>
+<option>1kg - ₹1000</option>
+</select>
+
+<button onclick="pickleOrder('Chicken Pickle','chicken')">
+Order
+</button>
+
+</div>
+</div>
+
+<div class="product">
+<img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXPm1N8yUkojB-jZG0KKzamLAAS9dzBuccyQ&s">
+<div class="content">
+<h3>Chicken Boneless</h3>
+
+<select id="boneless">
+<option>250g - ₹300</option>
+<option>500g - ₹600</option>
+<option>1kg - ₹1200</option>
+</select>
+
+<button onclick="pickleOrder('Chicken Boneless','boneless')">
+Order
+</button>
+
+</div>
+</div>
+
+<div class="product">
+<img loading="lazy" src="https://i0.wp.com/ahahomefoods.com/wp-content/uploads/2023/02/Mutton-Pickle.jpg?fit=600%2C600&ssl=1">
+<div class="content">
+<h3>Mutton Pickle</h3>
+
+<select id="mutton">
+<option>250g - ₹475</option>
+<option>500g - ₹950</option>
+<option>1kg - ₹1900</option>
+</select>
+
+<button onclick="pickleOrder('Mutton Pickle','mutton')">
+Order
+</button>
+
+</div>
+</div>
+
+<div class="product">
+<img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ6jIH_cCu9QGRupcPwcRkZcW-zq3bkmp_ow&s">
+<div class="content">
+<h3>Prawns Pickle</h3>
+
+<select id="prawns">
+<option>250g - ₹450</option>
+<option>500g - ₹900</option>
+<option>1kg - ₹1800</option>
+</select>
+
+<button onclick="pickleOrder('Prawns Pickle','prawns')">
+Order
+</button>
+
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+📞 7901091495 <br>
+📸 Instagram: swaroop_pickles_by_mom
+</div>
+
+<script>
+
+function validateFields(){
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var address=document.getElementById("address").value;
+
+if(name=="" || phone=="" || address==""){
+
+alert("Please fill all details");
+
+return false;
+
+}
+
+return true;
+
+}
+
+function foodOrder(item,id){
+
+if(!validateFields()) return;
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var address=document.getElementById("address").value;
+var details=document.getElementById(id).value;
+
+var msg=
+"🍔 FOOD ORDER\n\n"+
+"Name: "+name+"\n"+
+"Phone: "+phone+"\n"+
+"Address: "+address+"\n"+
+"Food Item: "+item+"\n"+
+"Details: "+details;
+
+window.open("https://wa.me/917901091495?text="+encodeURIComponent(msg));
+
+}
+
+function groceryOrder(item,id){
+
+if(!validateFields()) return;
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var address=document.getElementById("address").value;
+var details=document.getElementById(id).value;
+
+var msg=
+"🛒 GROCERY ORDER\n\n"+
+"Name: "+name+"\n"+
+"Phone: "+phone+"\n"+
+"Address: "+address+"\n"+
+"Item: "+item+"\n"+
+"Details: "+details;
+
+window.open("https://wa.me/917901091495?text="+encodeURIComponent(msg));
+
+}
+
+function rideBooking(type,id){
+
+if(!validateFields()) return;
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var address=document.getElementById("address").value;
+var details=document.getElementById(id).value;
+
+var msg=
+"🛵 RIDE BOOKING\n\n"+
+"Name: "+name+"\n"+
+"Phone: "+phone+"\n"+
+"Pickup Location: "+address+"\n"+
+"Ride Type: "+type+"\n"+
+"Ride Details: "+details;
+
+window.open("https://wa.me/917901091495?text="+encodeURIComponent(msg));
+
+}
+
+function pickleOrder(product,id){
+
+if(!validateFields()) return;
+
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var address=document.getElementById("address").value;
+var qty=document.getElementById(id).value;
+
+var msg=
+"🌶️ PICKLE ORDER\n\n"+
+"Name: "+name+"\n"+
+"Phone: "+phone+"\n"+
+"Address: "+address+"\n"+
+"Product: "+product+"\n"+
+"Quantity: "+qty;
+
+window.open("https://wa.me/917901091495?text="+encodeURIComponent(msg));
+
+}
+
+</script>
+
+</body>
+</html>
